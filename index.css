@@ -1,0 +1,244 @@
+/* General Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #0c0101;
+}
+
+/* Header Styles */
+header {
+    background-color: #eee7e7;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;  /* Set the logo text color to white for better visibility */
+    transition: color 0.3s ease;  /* Smooth transition effect */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white; /* Set white color for links in the desktop navigation */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/pic1.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-item {
+    width: 30%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.portfolio-gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item p {
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    font-size: 2rem;
+    display: none;  /* Hide by default */
+    cursor: pointer;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+}
+
+#nav-links li {
+    margin: 0 15px;
+}
+
+#nav-links li a {
+    color: white; /* Change to white */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;  /* Show hamburger icon on small screens */
+    }
+
+    #nav-links {
+        display: none;  /* Hide menu links by default */
+        flex-direction: column;
+        background-color: #dfe0d2f8;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #nav-links li a {
+        color: white; /* Ensure links are white on mobile */
+        font-size: 1.2rem;
+    }
+
+    #nav-links.active {
+        display: block;  /* Show the menu when active */
+    }
+}

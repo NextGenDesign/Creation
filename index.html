@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Business - Web & Interior Design</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Design Studio</h1>
+            </div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    &#9776; <!-- This is the hamburger icon -->
+                </div>
+                
+                    <ul id="nav-links"></ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    
+        <section id="home" class="hero" style="background-image: url('images/pic1.jpg');"></section>
+        <div class="hero-content">
+            <h2>Transforming Spaces & Websites with Innovative Designs</h2>
+            <p>We create stunning websites and interiors that tell your brand story.</p>
+           <!-- <a href="#contact" class="cta-btn">Request a Quote</a>-->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <p>Responsive, custom websites built to fit your business needs.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Interior Design</h3>
+                    <p>Elegant interior design solutions for residential and commercial spaces.</p>
+                </div>
+                <div class="service-item">
+                    <h3>3D Design & Sketching</h3>
+                    <p>Bring your ideas to life with photorealistic 3D models and sketches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <img src="images/pic2.jpg" alt="Web Project">
+                    <p>Web Project</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/pic5.jpg" alt="Interior Project">
+                    <p>Interior Project</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/pic4.jpg" alt="3D Sketch 1">
+                    <p>3D Design Project</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Design Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form Validation
+        document.querySelector("form").addEventListener("submit", function(e) {
+            let name = document.querySelector("input[name='name']").value;
+            let email = document.querySelector("input[name='email']").value;
+            let message = document.querySelector("textarea[name='message']").value;
+    
+            // Check if the name, email, and message fields are empty
+            if (name === "" || email === "" || message === "") {
+                e.preventDefault();  // Prevent form submission
+                alert("Please fill out all fields.");
+                return false;
+            }
+    
+            // Simple email format validation
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                e.preventDefault();
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            // If everything is valid
+            alert("Form submitted successfully!");
+        });
+
+         // Smooth Scrolling for Navigation Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+
+            // Smooth scroll to the target section
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Toggle Navigation Menu (Hamburger Menu)
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");  // Toggle the 'active' class to show/hide the menu
+    });
+
+    // ⁠nmsastrovasthunaveen@gmail.com
+
+    //8123373836
+    
+
+    </script>
+
+</body>
+</html>
